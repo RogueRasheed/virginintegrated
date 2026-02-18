@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Virgin Integrated",
-  description: "Made with strong integrations and a focus on user experience.",
+  description: "Multi-disciplinary Engineering, Construction, Consultancy and Project Management Services across Nigeria.",
 };
 
 export default function RootLayout({
