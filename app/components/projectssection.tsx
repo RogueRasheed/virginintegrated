@@ -2,97 +2,83 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import FoundationIcon from '@mui/icons-material/Foundation';
-import ForkRightIcon from '@mui/icons-material/ForkRight';
-import HandymanIcon from '@mui/icons-material/Handyman';
-import RouteIcon from '@mui/icons-material/Route';
-import EngineeringIcon from '@mui/icons-material/Engineering';
-import AddRoadIcon from '@mui/icons-material/AddRoad';
+import Image from "next/image";
 
-const projects = [
+const featuredProjects = [
   {
-    title: "Ogbesse River Bridge",
-    category: "Bridge Design & Project Management",
-    icon: <FoundationIcon />,
+    title:
+      "Road/Drainage Constructions Across The State",
+    subtitle:
+      "Ministry of Works, Edo State Government",
+    image: "/images/ministry4.jpg",
   },
   {
-    title: "Ekehuan Road",
-    category: "Road Design",
-    icon: <RouteIcon />,
+    title:
+      "Construction of Irrua–Usugbenu–Ugbegun–Ebudin–Ujogba Road",
+    subtitle: "Highway Construction Project",
+    image: "/images/irrua.jpg",
   },
   {
-    title: "Irrua–Usugbenu–Ugbegun–Ebudin–Ujogba Road",
-    category: "Highway Construction",
-    icon: <EngineeringIcon />,
-  },
-  {
-    title: "Iguobazuwa–Siluko Road",
-    category: "Road Construction",
-    icon: <ForkRightIcon />,
-  },
-  {
-    title: "SEEFOR Project",
-    category: "Project Management Services",
-    icon: <HandymanIcon />,
-  },
-  {
-    title: "Road & Drainage Construction (Edo State)",
-    category: "Civil Infrastructure",
-    icon: <AddRoadIcon />,
+    title:
+      "Construction of Iguobazuwa–Siluko Road",
+    subtitle: "Road Infrastructure Development",
+    image: "/images/siluko.jpg",
   },
 ];
 
-
 export default function ProjectsSection() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#0B1C2D]">
-            Featured Projects
+            Featured Infrastructure Projects
           </h2>
           <div className="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-            Delivering infrastructure excellence across Edo State and beyond
-            through structured engineering and project management.
-          </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
+              transition={{ delay: index * 0.2, duration: 0.7 }}
               viewport={{ once: true }}
-              className="border border-gray-200 p-8 transition duration-300 hover:shadow-lg hover:-translate-y-2"
+              className="relative h-80 overflow-hidden group"
             >
-              <span className="material-icons text-orange-500 text-3xl mb-4 block">
-                {project.icon}
-              </span>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover group-hover:scale-110 transition duration-700"
+              />
 
-              <h3 className="text-lg font-semibold text-[#0B1C2D] mb-3">
-                {project.title}
-              </h3>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
+                <h3 className="text-white text-lg font-semibold">
+                  {project.title}
+                </h3>
 
-              <p className="text-gray-600 text-sm">
-                {project.category}
-              </p>
+                <p className="text-gray-300 text-sm mt-2">
+                  {project.subtitle}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <Link href="/projects">
             <button className="bg-[#0B1C2D] text-white px-8 py-3 hover:bg-[#1E3A8A] transition">
               View All Projects
