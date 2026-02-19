@@ -118,7 +118,10 @@ const projects = [
     images: [
       "/images/ministry.jpg",
       "/images/ministry2.jpg",
-      "/images/ministry3.jpg"
+      "/images/ministry3.jpg",
+      "/images/ministry4.jpg",
+      "/images/ministry5.jpg",
+      "/images/ministry6.jpg",
     ],
     description:
       "Execution of multiple road and drainage construction projects across Edo State under the Ministry of Works.",
@@ -126,35 +129,43 @@ const projects = [
   {
     title: "Construction of Irrua–Usugbenu–Ugbegun–Ebudin–Ujiogba Road",
     category: "Road Construction",
-    images: ["/images/projects/irrua-road.jpg"],
+    images: ["/images/irrua.jpg",
+      "/images/irrua2.jpg",],
     description:
       "Full-scale construction of inter-community road infrastructure improving connectivity and transport efficiency.",
   },
   {
     title: "Construction of Igueben – Ewohimi – Ewatto – Emu – Okhuesan Road",
     category: "Road Construction",
-    images: ["/images/projects/igueben-road.jpg"],
+    images: [
+      "/images/igue2.jpg",
+      "/images/igue.jpg"],
     description:
       "Major arterial road construction project enhancing economic mobility and regional access.",
   },
   {
     title: "Construction of Uhen–Olumoye Road",
     category: "Road Construction",
-    images: ["/images/projects/uhen-road.jpg"],
+    images: ["/images/uhen.jpg",
+      "/images/uhen2.jpg",],
     description:
       "Strategic roadway project focused on durability, drainage optimization, and long-term sustainability.",
   },
   {
     title: "Construction of Iguobazuwa–Siluko Road",
     category: "Road Construction",
-    images: ["/images/projects/iguobazuwa-road.jpg"],
+    images: ["/images/siluko.jpg",
+      "/images/siluko2.jpg",],
     description:
       "Expansion and rehabilitation of roadway infrastructure to support increased traffic and commercial activity.",
   },
   {
     title: "Mission / Upper Mission Road Rehabilitation",
     category: "Road Rehabilitation",
-    images: ["/images/projects/mission-road.jpg"],
+    images: ["/images/mission.jpg",
+      "/images/mission2.jpg",
+      "/images/mission3.jpg",
+    "/images/mission4.jpg"],
     description:
       "Repair of potholes and structural reinforcement using stone base for enhanced roadway stability.",
   },
