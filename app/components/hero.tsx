@@ -31,8 +31,10 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8"
         >
-          <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-3 rounded-md font-semibold">
-            View Our Projects
+          <button
+            onClick={() => window.location.href = "tel:+2348023038559   "}
+            className="bg-orange-500 hover:bg-orange-600 transition px-8 py-3 rounded-md font-semibold">
+            Call Us Now
           </button>
         </motion.div>
       </div>
