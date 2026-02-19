@@ -116,8 +116,9 @@ const projects = [
     title: "Road/Drainage Constructions Across Edo State",
     category: "Road & Drainage Infrastructure",
     images: [
-      "/images/ministr.jpg",
-      "/images/projects/irrua-road.jpg",
+      "/images/ministry.jpg",
+      "/images/ministry2.jpg",
+      "/images/ministry3.jpg"
     ],
     description:
       "Execution of multiple road and drainage construction projects across Edo State under the Ministry of Works.",
