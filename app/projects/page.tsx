@@ -119,9 +119,8 @@ const projects = [
     title: "Road/Drainage Constructions Across Edo State",
     category: "Road & Drainage Infrastructure",
     images: [
-      "/images/ministry.jpg",
-      "/images/ministry2.jpg",
-      "/images/ministry3.jpg"
+      "/images/ministr.jpg",
+      "/images/projects/irrua-road.jpg",
     ],
     description:
       "Execution of multiple road and drainage construction projects across Edo State under the Ministry of Works.",
@@ -165,6 +164,54 @@ const projects = [
 
 
 /* ================= PAGE ================= */
+
+/* ================= EXTRA PROJECT LIST (NO IMAGES) ================= */
+
+const extraProjects = [
+  {
+    client: "Delta State Government / World Bank",
+    title: "State Government & Expenditure Result Consultancy Services (SEEFOR)",
+    location: "Asaba, Ughelli, Warri, Sapele",
+    status: "Completed",
+  },
+  {
+    client: "Ministry of Works, Edo State",
+    title: "Design of Adesogbe Road (Plymouth Road)",
+    location: "Benin City, Edo State",
+    status: "Completed",
+  },
+  {
+    client: "Ministry of Works, Edo State",
+    title: "Project Management Services for Siluko/Ugbowo Mission Road",
+    location: "Benin City, Edo State",
+    status: "Completed",
+  },
+  {
+    client: "Ministry of Housing & Urban Development",
+    title: "Architectural Consultant Design for University of Science & Tech, Uzairue",
+    location: "Uzairue, Edo State",
+    status: "Completed",
+  },
+  {
+    client: "Edo State Government",
+    title: "Remodelling/Refurbishment of Urban Water Board Building",
+    location: "Benin City, Edo State",
+    status: "Ongoing",
+  },
+  {
+    client: "Ministry of Works, Edo State",
+    title: "Design of Ekewan Road",
+    location: "Benin City, Edo State",
+    status: "Completed",
+  },
+  {
+    client: "Delta state University Abraka",
+    title: "Design of principal officers house & project management consultant",
+    location: "Delta state University Abraka",
+    status: "Completed",
+  },
+];
+
 
 export default function ProjectsPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -266,6 +313,41 @@ export default function ProjectsPage() {
       </section>
 
       {/* LIGHTBOX */}
+      {/* EXTRA PROJECT LIST SECTION */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-[#0B1C2D] mb-12">
+            Additional Executed Projects
+          </h2>
+
+          <div className="overflow-x-auto border border-gray-200 rounded-xl">
+            <table className="w-full text-left border-collapse">
+              <thead className="bg-gray-50">
+                <tr className="text-sm uppercase tracking-wider text-gray-600">
+                  <th className="p-4 border">Client</th>
+                  <th className="p-4 border">Project</th>
+                  <th className="p-4 border">Location</th>
+                  <th className="p-4 border">Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {extraProjects.map((p, i) => (
+                  <tr key={i} className="text-sm hover:bg-gray-50 transition">
+                    <td className="p-4 border font-medium">{p.client}</td>
+                    <td className="p-4 border">{p.title}</td>
+                    <td className="p-4 border">{p.location}</td>
+                    <td className="p-4 border text-green-700 font-semibold">
+                      {p.status}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {lightboxOpen && (
         <LightboxV2
           images={lightboxImages}
