@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 
-/* ================= LIGHTBOX V2 ================= */
 
 interface LightboxProps {
   images: string[];
@@ -112,8 +111,6 @@ function LightboxV2({ images, index, setIndex, onClose }: LightboxProps) {
 }
 
 
-/* ================= PROJECT DATA ================= */
-
 const projects = [
   {
     title: "Road/Drainage Constructions Across Edo State",
@@ -163,9 +160,6 @@ const projects = [
 ];
 
 
-/* ================= PAGE ================= */
-
-/* ================= EXTRA PROJECT LIST (NO IMAGES) ================= */
 
 const extraProjects = [
   {
@@ -196,7 +190,7 @@ const extraProjects = [
     client: "Edo State Government",
     title: "Remodelling/Refurbishment of Urban Water Board Building",
     location: "Benin City, Edo State",
-    status: "Ongoing",
+    status: "Completed",
   },
   {
     client: "Ministry of Works, Edo State",
